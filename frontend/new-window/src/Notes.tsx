@@ -1,18 +1,18 @@
 import { useState } from 'react';
 
-import './App.css';
+// import './App.css';
 import { useToast } from './radix/components/ui/use-toast';
 import Button from './components/button';
 type ParamsType = {
     params: string;
 };
-function App() {
+function Notes() {
     const [count, setCount] = useState(0);
     const { toast } = useToast();
     return (
         <div className='flex flex-col gap-10 items-center font-epilogue h-screen '>
             <h1 className='text-5xl font-bold mt-10 sm:text-6xl xl:text-7xl'>
-                Shared Page
+                This is Notes
             </h1>
             <h2 className='text-2xl sm:text-3xl md:text-4xl'>
                 For passing your{' '}
@@ -25,4 +25,4 @@ function App() {
     );
 }
 
-export default App;
+export default Notes;
