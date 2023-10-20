@@ -1,49 +1,25 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+
 import './App.css';
-import { useToast } from '../radix/components/ui/use-toast';
+import { useToast } from './radix/components/ui/use-toast';
+import Button from './components/button';
 
 function App() {
     const [count, setCount] = useState(0);
     const { toast } = useToast();
     return (
-        <>
-            <div>
-                <a href='https://vitejs.dev' target='_blank'>
-                    <img src={viteLogo} className='logo' alt='Vite logo' />
-                </a>
-                <a href='https://react.dev' target='_blank'>
-                    <img
-                        src={reactLogo}
-                        className='logo react'
-                        alt='React logo'
-                    />
-                </a>
-            </div>
-            <h1>Vite + React</h1>
-            <div className='card'>
-                <button onClick={() => setCount((count) => count + 1)}>
-                    count is {count}
-                </button>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to test HMR
-                </p>
-            </div>
-            <p className='read-the-docs'>
-                Click on the Vite and React logos to learn more
-            </p>
-            <button
-                onClick={() => {
-                    toast({
-                        title: 'Scheduled: Catch up',
-                        description: 'Friday, February 10, 2023 at 5:57 PM',
-                    });
-                }}
-            >
-                Show Toast
-            </button>
-        </>
+        <div className='flex flex-col gap-10 items-center font-epilogue h-screen '>
+            <h1 className='text-5xl font-bold mt-10 sm:text-6xl xl:text-7xl'>
+                Shared Page
+            </h1>
+            <h2 className='text-2xl sm:text-3xl md:text-4xl'>
+                For passing your{' '}
+            </h2>
+            <h3 className='text-xl sm:text-2xl md:text-2xl font-bold'>
+                notes and other content in text format.
+            </h3>
+            <Button></Button>
+        </div>
     );
 }
 
