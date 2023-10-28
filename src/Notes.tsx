@@ -23,9 +23,9 @@ function Notes() {
     return (
         <div>
             <Navbar></Navbar>
-            <div className='flex flex-col gap-10 items-center font-epilogue h-screen px-36'>
+            <div className='flex flex-col gap-10 items-center font-epilogue h-screen px-4 py-5'>
                 {isTabletOrMobile && (
-                    <div className='w-full flex justify-end px-10'>
+                    <div className='w-full flex justify-end sm:px-10'>
                         <Button className='bg-red hover:-translate-y-2 transition-all hover:bg-red px-6 py-0'>
                             Save
                         </Button>
@@ -33,19 +33,15 @@ function Notes() {
                 )}
                 <input
                     type='text'
-                    className='text-5xl outline-none border-none border-transparent focus:border-transparent focus:ring-0'
+                    className='text-3xl md:text-5xl outline-none border-none border-transparent focus:border-transparent focus:ring-0'
+                    placeholder='Title'
                 />
-                {/* <Input className=''></Input> */}
-                <h1 className='text-5xl font-bold mt-10 sm:text-6xl xl:text-7xl'></h1>
-                <h2 className='text-2xl sm:text-3xl md:text-4xl'>
-                    For passing your{' '}
-                </h2>
-                <h3 className='text-xl sm:text-2xl md:text-2xl font-bold'>
-                    notes and other content in text format.
-                </h3>
-                <Button className='bg-red hover:-translate-y-2 transition-all hover:bg-red'>
-                    Get Started
-                </Button>
+                <textarea
+                    name=''
+                    id=''
+                    className='text-xl w-[22rem] md:w-[35rem] xl:w-2/5'
+                    placeholder='Type Here'
+                ></textarea>
             </div>
         </div>
     );
