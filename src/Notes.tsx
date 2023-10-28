@@ -31,15 +31,25 @@ function Notes() {
                         </Button>
                     </div>
                 )}
-                <input
-                    type='text'
-                    className='text-3xl md:text-5xl outline-none border-none border-transparent focus:border-transparent focus:ring-0'
-                    placeholder='Title'
-                />
+                <div className='flex justify-center w-1/2'>
+                    <input
+                        type='text'
+                        className='text-3xl md:text-5xl outline-none border-none border-transparent focus:border-transparent focus:ring-0'
+                        placeholder='Title'
+                    />
+                    {isDesktopOrLaptop && (
+                        <div className='w-full flex justify-end sm:px-10'>
+                            <Button className='bg-red hover:-translate-y-2 transition-all hover:bg-red px-6 py-0'>
+                                Save
+                            </Button>
+                        </div>
+                    )}
+                </div>
+
                 <textarea
                     name=''
                     id=''
-                    className='text-xl w-[22rem] md:w-[35rem] xl:w-2/5'
+                    className='text-xl w-[22rem] md:w-[35rem] xl:w-1/2 outline-none border-none border-transparent focus:border-transparent focus:ring-0'
                     placeholder='Type Here'
                 ></textarea>
             </div>
