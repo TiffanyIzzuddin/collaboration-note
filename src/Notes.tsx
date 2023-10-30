@@ -49,7 +49,7 @@ function Notes() {
                 <textarea
                     name=''
                     id=''
-                    className='text-xl w-[22rem] md:w-[35rem] xl:w-1/2 outline-none border-none border-transparent focus:border-transparent focus:ring-0'
+                    className='text-xl w-[22rem] md:w-[35rem] xl:w-1/2 outline-none border-none border-transparent focus:border-transparent focus:ring-0 h-full '
                     placeholder='Type Here'
                 ></textarea>
             </div>
